@@ -1415,11 +1415,9 @@ legend {
       margin: 0 auto 50px auto; } }
 
 .alert {
-  margin: 4rem auto 50px auto;
+  margin: auto;
   text-align: center;
   line-height: 3.5rem;
-  align-self: center;
-  justify-content: center;
   font-size: 3rem;
   font-weight: 700; }
   @media only screen and (min-width: 768px) {
@@ -1429,8 +1427,9 @@ legend {
 .messages {
   opacity: 0;
   transition: opacity 1.5s ease-in;
-  display: flex;
-  flex: 1; }
+  position: relative;
+  margin: auto;
+  top: 30%; }
   .messages.active {
     opacity: 1; }
 

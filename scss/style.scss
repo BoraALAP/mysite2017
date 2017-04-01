@@ -1530,11 +1530,9 @@ legend {
 }
 
 .alert {
-    margin: 4rem auto 50px auto;
+    margin: auto;
     text-align: center;
     line-height: 3.5rem;
-    align-self: center;
-    justify-content: center;
     font:{
     	size: 3rem;
     	weight: 700;
@@ -1548,8 +1546,9 @@ legend {
 .messages{
 	opacity: 0;
 	transition: opacity 1.5s ease-in;
-	display: flex;
-	flex:1;   
+	position: relative;
+    margin: auto; 
+    top: 30%;   
 	&.active{
 		opacity: 1;   
 	}
