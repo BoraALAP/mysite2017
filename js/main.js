@@ -1,4 +1,16 @@
 jQuery(document).ready(function($){
+	
+
+	function tellmystory(){
+		console.log("%c","background: #d5383e; font-size: 12px; color: #f0f0f0"),
+		console.log("%c ==== If you are reading this, that means you are looking at my portfolio.","background: #d5383e; padding:5px; font-size: 12px; color: #ffffff"),
+		console.log("%c Please enjoy it, also get in touch with me, so we can work together.","background: #d5383e; padding:5px; font-size: 12px; color: #ffffff"),
+		console.log("%c 647-832-6789 , alapbora@gmail.com","background: #d5383e; padding:5px; font-size: 12px; color: #ffffff"),
+		console.log("%c","background: #d5383e; font-size: 12px; color: #f0f0f0")}
+
+		tellmystory();
+
+
 	//cache some jQuery objects
 	var modalTrigger1 = $('.cd-modal-trigger1'),
 		transitionLayer1 = $('.cd-transition-general'),
@@ -181,7 +193,7 @@ $('input[type="text"], input[type="email"]')
     .each(resizeInput);
 
 
-console.clear();
+// console.clear();
 // Adapted from georgepapadakis.me/demo/expanding-textarea.html
 (function(){
   
