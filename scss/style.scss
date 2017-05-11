@@ -1,10 +1,5 @@
-@import "bourbon/bourbon";
+@import "_imports.scss"; // media queries - if needed 
 
-@import '../partials/variables'; // colors, fonts etc...
-
-@import '../partials/mixins'; // custom mixins
-
-@import '../partials/layout'; // responsive grid and media queries
 
 /* -------------------------------- 
 
@@ -14,27 +9,27 @@ Primary style
 
 
 *, *::after, *::before {
-	box-sizing: border-box; 
+	box-sizing: border-box;   
 }
-
+ 
 html { 
-	font-size: 62.5%;
-	@include scrollbars(1rem, $color-1);  
+	font-size: 62.5%; 
+	@include scrollbars(1rem, $color-1);    
 }
 
 body {
-	font: {
+	font: { 
 		size: 1.6rem;
 		family: $primary-font;
 	}
 	color: $color-1;
-	background-color: $color-3;
-	@include font-smoothing;
+	background-color: $color-3; 
+	@include font-smoothing; 
 
 }
 
 html, body {
-	height: 100%;
+	height: 100%;   
 }
 
 
@@ -137,20 +132,20 @@ canvas{
 }
 
 .skew-box{
-	@include transform(skewY(-15deg));
+	transform: skewY(-15deg);
 	background-size: cover;
 	background-color: $white;
 	height:100%;
 	width: 100%;
 	position: fixed;
 	bottom: 50%;
-	@include backface-visibility(hidden);
+	backface-visibility:hidden;
 	overflow: hidden;
 	z-index: 10;
 }
 
 .skew-content{
-	@include transform(skewY(15deg));
+	transform:skewY(15deg);
 	height: 100%
 }
 
@@ -230,11 +225,11 @@ canvas{
 }
 
 .common_enterence{
-	@include transform(skewX(-10deg));
+	transform: skewX(-10deg);
 	height: 100%!important;
 	width: 70%!important;
 	position: fixed;
-    @include transition(all, 10s, 0.5s, ease);
+    transition: all, 10s, 0.5s, ease;
     z-index: 30;
 
 
@@ -245,9 +240,9 @@ canvas{
    		pointer-events: none;
    		margin: auto;
    		width: 50%;
-   		@include transform(skewX(10deg));
+   		transform: skewX(10deg);
    		h5{
-   			@include transition(all, 2s, ease);
+   			transition:all, 2s, ease;
    			text-align: center;
    			/*mix-blend-mode: overlay;*/
    			color: $white;
@@ -292,7 +287,7 @@ canvas{
     background-size: 500% 500%;
     animation: Gradient 10s ease infinite;
    	mix-blend-mode: screen;
-    @include transition(all, 2s, ease);
+    transition:all 2s ease;
 
      @include MQ(M) {
 			mix-blend-mode: overlay;
@@ -316,7 +311,7 @@ canvas{
 	background-size: 200% 200% !important;
     animation: Gradient 20s ease infinite;
     mix-blend-mode: hard-light;
-    @include transition(all, 2s, ease);
+    transition: all 2s ease;
     @include MQ(M) {
 			mix-blend-mode: overlay;
 		}	
@@ -446,8 +441,8 @@ Patterns - reusable parts of our design
 	text-transform: uppercase;
 	background-color: $color-2;
 	box-shadow: 0 0px 30px rgba(0, 0, 0, .0);
-	@include font-smoothing;
-	@include transition(all .3s);
+
+	transition: all .3s;
 
 	display: flex;
 	align-items: center;
@@ -466,14 +461,14 @@ Patterns - reusable parts of our design
 
 
 
-	&:nth-of-type(2){
+	&:nth-of-type(1){
     	/*background-image: url(../img/img-1.jpg);*/
     	@include linearGradient(33deg, darken(#CB0076, 10%), #CB0076); 
 	    	
 	    	&:before{
-	    	background-image: url(../img/logo/tsa_logo.svg);
+	    	background-image: url(../img/logo/tsa_logo.svg);  
 	    	content: " ";
-	    	width:200px;
+	    	width:200px; 
 	    	height: 75px;
     		background-size: contain;
     		color: $white;
@@ -485,7 +480,7 @@ Patterns - reusable parts of our design
 	    }
     }
 
-    &:nth-of-type(5){
+    &:nth-of-type(4){
 		/*background-image: url(../img/img-2.jpg);*/
     	@include linearGradient(33deg, #3B6E98, darken(#3B6E98, 20%));
 
@@ -498,13 +493,13 @@ Patterns - reusable parts of our design
     		background-size: contain;
 		    position: relative;
 		    background-repeat: no-repeat;
-		    background-position: 50% 50%;
+		    background-position: 50% 50%;  
 		    opacity: 0;
 		    animation:titleopacity 2s 4s cubic-bezier(0, 0, 1, 1) forwards;
 	    }
     }
 
-    &:nth-of-type(3){
+    &:nth-of-type(2){
     	/*background-image: url(../img/img-3.jpg);*/
     	@include linearGradient(33deg, darken(#F15060, 20%), #F15060);
 
@@ -523,7 +518,7 @@ Patterns - reusable parts of our design
 	    }
     }
 
-    &:nth-of-type(4){
+    &:nth-of-type(3){
 		/*background-image: url(../img/img-1.jpg);*/
     	@include linearGradient(33deg, #FFffee, #FFffdd);
 
@@ -545,13 +540,13 @@ Patterns - reusable parts of our design
 	    }
     }
 
-    &:nth-of-type(1){
+    &:nth-of-type(5){
 		/*background-image: url(../img/img-2.jpg);*/
     	@include linearGradient(33deg, #022337, #1f0746);
     	cursor: default;
 
     		&:before{
-	    	background-image: url(../img/logo/promescent.svg);
+	    	background-image: url(../img/logo/.svg);
 	    	content: " ";
 	    	width:200px;
 	    	height: 55px;
@@ -577,7 +572,7 @@ Patterns - reusable parts of our design
     	opacity: 1;
     	@include MQ(M) {
 	    	opacity: 0;
-	    	@include transition(all 2s);
+	    	transition: all 2s;
 	    	transform: translateX(75px);
 	    	color: $white;
 	    }
@@ -768,24 +763,24 @@ Main Content Containers
 				&:nth-of-type(1){
 					&:hover{
 						img{
-							@include boxShadow(lighten($color-1, 10%), 2px);
-							@include transition(box-shadow 0.6s);
+							box-shadow: lighten($color-1, 10%), 2px;
+							transition: box-shadow 0.6s;
 						};
 					}
 				}
 				&:nth-of-type(2){
 					&:hover{
 						img{
-							@include boxShadow($color-1, 2px);
-							@include transition(box-shadow 0.6s);
+							box-shadow: $color-1 2px;
+							transition: box-shadow 0.6s;
 						};
 					}
 				}
 				&:nth-of-type(3){
 					&:hover{
 						img{
-							@include boxShadow(darken($color-1, 10%), 2px);
-							@include transition(box-shadow 0.6s);
+							box-shadow: darken($color-1, 10%) 2px;
+							transition: box-shadow 0.6s;
 						};
 					}
 				}	
@@ -799,24 +794,24 @@ Main Content Containers
 				&:nth-of-type(1){
 					&:hover{
 						img{
-							@include boxShadow(lighten(#b30046, 10%), 2px);
-							@include transition(box-shadow 0.6s);
+							 box-shadow: lighten(#b30046, 10%) 2px;
+							 transition:box-shadow 0.6s;
 						};
 					}
 				}
 				&:nth-of-type(2){
 					&:hover{
 						img{
-							@include boxShadow(#b30046, 2px);
-							@include transition(box-shadow 0.6s);
+							 box-shadow: #b30046 2px;
+							 transition: box-shadow 0.6s;
 						};
 					}
 				}
 				&:nth-of-type(3){
 					&:hover{
 						img{
-							@include boxShadow(darken(#b30046, 10%), 2px);
-							@include transition(box-shadow 0.6s);
+							 box-shadow: darken(#b30046, 10%) 2px;
+							 transition: box-shadow 0.6s;
 						};
 					}
 				}	
@@ -828,24 +823,24 @@ Main Content Containers
 				&:nth-of-type(1){ 
 					&:hover{
 						img{
-							@include boxShadow(lighten(#ca4f00, 10%), 2px);
-							@include transition(box-shadow 0.6s);
+							 box-shadow:lighten(#ca4f00, 10%) 2px;
+							 transition:box-shadow 0.6s;
 						}
 					}
 				}
 				&:nth-of-type(2){
 					&:hover{
 						img{
-							@include boxShadow(#ca4f00, 2px);
-							@include transition(box-shadow 0.6s);
+							 box-shadow:#ca4f00 2px;
+							 transition:box-shadow 0.6s;
 						};
 					}
 				}
 				&:nth-of-type(3){
 					&:hover{
 						img{
-							@include boxShadow(darken(#ca4f00, 10%), 2px);
-							@include transition(box-shadow 0.6s);
+							 box-shadow:darken(#ca4f00, 10%) 2px;
+							 transition:box-shadow 0.6s;
 						};
 					}
 				}	
@@ -872,7 +867,7 @@ Modal window
 	background-size: cover;
 	opacity: 0;
 	visibility: hidden;
-	@include transition(opacity .3s 0s, visibility 0s .3s);
+	transition: opacity .3s 0s, visibility 0s .3s;
 
 	.modal-close {
 		/* 'X' icon */
@@ -892,12 +887,12 @@ Modal window
 		
 		visibility: hidden;
 		opacity: 0;
-		@include transform(scale(0));
-		@include transition(transform .3s 0s, visibility 0s .3s, opacity .3s 0s);
+		transform: scale(0);
+		transition:transform .3s 0s, visibility 0s .3s, opacity .3s 0s;
 
 		.no-touch &:hover {
 			background-color: rgba(#000, .75);
-			transition: (background-color, 0.4s, ease);
+			transition: background-color 0.4s ease;
 		}
 	}
 
@@ -908,7 +903,7 @@ Modal window
 	&.visible {
 		opacity: 1;
 		visibility: visible;
-		@include transition(opacity .7s, visibility 0s);
+		transition:opacity .7s, visibility 0s;
 
 		.modal-content {
 			/* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
@@ -918,8 +913,8 @@ Modal window
 		.modal-close {
 			visibility: visible;
 			opacity: 1;
-			@include transition(transform .3s 0s, visibility 0s 0s, opacity .3s 0s);
-			@include transform(scale(1));
+			transition: transform .3s 0s, visibility 0s 0s, opacity .3s 0s;
+			transform: scale(1);
 		}
 
 		
@@ -1013,7 +1008,7 @@ Modal window
 	padding: 3em 5%;
 	color: $white;
 	background: none;
-	@include font-smoothing;
+
 
 		h1{
 			text-align: center;
@@ -1216,7 +1211,7 @@ Bottom
 
 .clickhere{
 	border-bottom:1px solid rgba(30, 0, 1, 0);
-	@include transition(letter-spacing .3s 0s, border-bottom .4s .3s);
+	transition: letter-spacing .3s 0s, border-bottom .4s .3s;
 
 	&:hover{
 		letter-spacing: 5px;
@@ -1249,7 +1244,7 @@ Transition Layer
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		@include transform(translateY(-50%) translateX(-2%));
+		transform: translateY(-50%) translateX(-2%);
 		/* its dimentions will be overwritten using jQuery to proportionally fit the viewport */
 		height: 100%;
 		/* our sprite is composed of 25 frames */ 
@@ -1264,13 +1259,13 @@ Transition Layer
 	}
 
 	&.opening .bg-layer {
-		@include animation(cd-sequence .8s steps(24));
-		@include animation-fill-mode(forwards);
+		animation: cd-sequence .8s steps(24);
+		animation-fill-mode:forwards;
 	}
 
 	&.closing .bg-layer {
-		@include animation(cd-sequence-reverse .8s steps(24));
-		@include animation-fill-mode(forwards);
+		animation:cd-sequence-reverse .8s steps(24);
+		animation-fill-mode:forwards;
 	}
 
 	.no-cssanimations & {
@@ -1281,23 +1276,23 @@ Transition Layer
 
 
 
-@include keyframes(cd-sequence) {
+@keyframes(cd-sequence) {
 	0% {
 		/* translateX(-2%) is used to horizontally center the first frame inside the viewport */
-		@include transform(translateY(-50%) translateX(-2%));
+		transform:translateY(-50%) translateX(-2%);
 	}
 	100% {
 		/* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
-   		@include transform(translateY(-50%) translateX(-98%));
+   		transform:translateY(-50%) translateX(-98%);
 	}
 }
 
-@include keyframes(cd-sequence-reverse) {
+@keyframes(cd-sequence-reverse) {
 	0% {
-		@include transform(translateY(-50%) translateX(-98%));
+		transform:translateY(-50%) translateX(-98%);
 	}
 	100% {
-   		@include transform(translateY(-50%) translateX(-2%));
+   		transform:translateY(-50%) translateX(-2%);
 	}
 }
 
@@ -1441,26 +1436,26 @@ input:required:invalid {
 	svg{
 		.st0{
 			fill:$white;
-			@include transition(all .4s);
+			transition:all .4s;
 		}
 		.st1{
 			opacity:0.19;
 			clip-path:url(#SVGID_2_);
 			fill:$color-1;
-			@include transition(all .4s .2s);
+			transition:all .4s .2s;
 		}
 		.plane{
 			transform: translate(0px, 0px);
-			@include transition(all .4s .2s);
+			transition:all .4s .2s;
 		}
 		.st2{
 			fill:$color-2;
-			@include transition(all .4s);
+			transition:all .4s;
 		}
 		.st3{
 			opacity:0.19;
 			fill:lighten($color-2, 50%);
-			@include transition(all .4s);
+			transition:all .4s;
 		}
 
 	}
@@ -1571,7 +1566,7 @@ FLoating labels
 		left: 16px;
 		font-size: 1.6rem;
 		cursor: text;
-		@include transition(top .2s, left .2s, font-size .2s);
+		transition:top .2s, left .2s, font-size .2s;
 	}
 
 	.icon .cd-label {
@@ -1582,7 +1577,7 @@ FLoating labels
 		/* move label out the input field */
 		font-size: 1.2rem;
 		top: -16px;
-		left: 0 !important;
+		left: 0 !important; 
 	}
 
 	@include MQ(M) {
